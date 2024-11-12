@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio grafico di densità</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.6.0.min.js"></script>
+</head>
+<body class="bg-dark text-light">
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Grafico di densità del tempo di esecuzione processi</h1>
+        <div class="card p-4 shadow mb-4"> 
+            <div >{{ div|safe }}</div>
+            {{ script|safe }}
+            <div class="legend-container">
+                {% for label, colore, id_area in legend_items %}
+                    <div class="legend-item" onclick="location.href='/details/{{ id_area }}'">
+                        <div class="color-box" style="background-color: {{ colore }};"></div>
+                        <span>{{ label }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>  
+</body>
+</html>

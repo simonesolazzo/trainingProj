@@ -1,0 +1,53 @@
+body {
+    background-color: #1c1e21;  /* Colore scuro di sfondo */
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5);  /* Sfondo trasparente per la card */
+}
+
+.legend-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.2s;
+}
+
+.legend-item:hover {
+    transform: scale(1.05);
+}
+
+.color-box {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+.text-light {
+    color: #e0e0e0;  /* Colore testo leggibile su sfondo scuro */
+}
+
+h1, .legend-item span {
+    color: #f8f9fa;
+}
+
+
+
+form input[type="search"] {
+    background-color: #333333; /* Sfondo campo di input */
+    color: #e0e0e0; /* Colore testo campo di input */
+    border: 1px solid #444444; /* Colore bordo campo di input */
+}
+
+form input[type="search"]::placeholder {
+    color: #a0a0a0; /* Colore testo placeholder */
+}
